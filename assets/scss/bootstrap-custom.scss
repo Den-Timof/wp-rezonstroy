@@ -1,0 +1,16 @@
+// Required
+@import '../plugins/bootstrap/scss/_functions.scss';
+@import '../plugins/bootstrap/scss/_variables.scss';
+@import '../plugins/bootstrap/scss/_mixins.scss';
+
+// Optional
+@import '../plugins/bootstrap/scss/mixins/_breakpoints.scss';
+
+@import '../plugins/bootstrap/scss/utilities/_text.scss';
+@import '../plugins/bootstrap/scss/utilities/_float.scss';
+
+// _mixins-bootstrap
+@import 'partials/_mixins-bootstrap.scss';
+
+// Modal
+@import '../plugins/bootstrap/scss/_modal.scss';

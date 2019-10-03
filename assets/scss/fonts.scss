@@ -1,0 +1,26 @@
+$fontFolder : 'fonts';
+$fontFamily : 'Montserrat';
+$fontExt : 'ttf';
+
+// список для семейства Gilroy
+$fontWeight: (
+	'Thin'				: '100',
+	'ExtraLight'	: '200',
+	'Light'				: '300',
+	'Regular'			: '400',
+	'Medium'			: '500',
+	'SemiBold' 		: '600',
+	'Bold' 				: '700',
+	'ExtraBold' 	: '800',
+	'Black'				: '900',
+);
+
+
+@each $itemFont, $itemWeight in $fontWeight {
+	@font-face {
+		font-family: '#{$fontFamily}';
+		src: url("../../#{$fontFolder}/#{$fontFamily}/#{$fontFamily}-#{$itemFont}.#{$fontExt}"); 
+		font-weight: #{$itemWeight};
+		font-display: swap;
+	}
+}

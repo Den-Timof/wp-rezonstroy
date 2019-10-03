@@ -1,0 +1,32 @@
+
+@import 'bootstrap-custom.scss';
+
+@import './blocks/_sprite.scss';
+@import './blocks/_sprite-icon.scss';
+
+@import './blocks/_general.scss';
+@import './blocks/_header.scss';
+@import './blocks/_footer.scss';
+@import './blocks/_sidebar.scss';
+
+@import './blocks/_page.scss';
+@import './blocks/_single.scss';
+@import './blocks/_archive.scss';
+
+@import './blocks/_content.scss';
+@import './blocks/_feedback.scss';
+@import './blocks/_modal.scss';
+@import './blocks/_slider.scss';
+@import './blocks/_menu.scss';
+
+@import './pages/_index.scss';
+@import './pages/_services.scss';
+
+
+// section:not(.feedback) {
+// 	display: none;
+// }
+
+// header {
+// 	display: none;
+// }

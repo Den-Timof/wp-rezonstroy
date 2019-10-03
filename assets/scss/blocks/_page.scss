@@ -1,0 +1,260 @@
+// .page {
+
+	.section-first-screen {
+
+		// .bg-image {
+		// 	filter: brightness(0.5);
+		// 	margin: 0 auto;
+		// 	display: block;
+		// }
+		// .bg-image-2 {
+		// 	display: block;
+		// 	margin: 0 auto !important;
+		// }
+
+		.first-screen-content {
+			.entry-title {
+				// text-align: right;
+				// border-bottom: 2px solid rgba(255,255,255, 0.5);
+				// padding-right: 45px;
+				padding-bottom: 15px;
+				font-weight: 300;
+			}
+
+			.text_under_title {
+				color: white;
+				// padding-left: 45px;
+				
+				p {
+					&:last-child {
+						font-size: 16px;
+					}
+				}
+				
+				blockquote, p {
+					margin-bottom: 30px;
+				}
+				
+				blockquote {
+					p {
+						font-size: 22px !important;
+
+						@include media-breakpoint-down(md) {
+							font-size: 18px !important;
+						}
+					}
+				}
+			}
+
+			.title-row {
+				position: relative;
+				// margin-bottom: 170px;
+				width: 100%;
+
+				.title-line {
+					position: absolute;
+					height: 100%;
+					bottom: 0;
+
+					.row, .col {
+						height: inherit;
+					}
+
+					.line {
+						height: 2px;
+						width: 100%;
+						background-color: rgba(255,255,255, 0.5);
+						position: absolute;
+						bottom: 0;
+					}
+				}
+			}
+		}
+
+		.contacts-data {
+			margin-top: 50px;
+
+
+			span {
+				display: block;
+			}
+
+			.phone {
+				line-height: 1;
+				color: rgba(255,255,255,0.75);
+				font-size: 50px;
+				cursor: pointer;
+				text-decoration: none;
+				padding-right: 30px;
+				
+				width: 100%;
+				display: block;
+
+				@include media-breakpoint-down(xs) {
+					font-size: 30px;
+
+					@include media-break-down(xxs) {
+						font-size: 20px;
+					}
+				}
+				
+				&:hover {
+					text-decoration: underline;
+				}
+				&:active {
+					color: rgba(255,255,255,1);
+				}
+			}
+			.contactus {
+				line-height: 1;
+				color: white;
+				display: inline-block;
+				vertical-align: middle;
+				text-decoration: none;
+				border-left: 2px solid #ffcc99;
+				// height: 100%;
+				padding-left: 20px;
+
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					right: 20px;
+					top: 5px;
+					@include sprite($s-arrow-green-right);
+
+					@include media-breakpoint-down(lg) {
+						right: -20px;
+
+						@include media-breakpoint-down(sm) {
+							position: relative;
+							top: -30px;
+							left: 100px;
+						}
+					}
+				}
+			}
+			.city-address {
+				color: white;
+				margin-top: 35px;
+				display: block;
+				font-size: 14px;
+				
+				.city {
+					font-size: 22px;
+					margin-bottom: 10px;
+				}
+				.address {
+					line-height: 1.5;
+					text-decoration: underline;
+				}
+			}
+			.email {
+				margin-top: 35px;
+				margin-bottom: 10px;
+				color: white;
+				font-size: 22px;
+				text-decoration: underline;
+			}
+			.worktime {
+				color: white;
+				font-size: 14px;
+			}
+		}
+	}
+// }
+
+.page.page-template-template-page-contacts {
+	.section-first-screen {
+		@include media-breakpoint-down(xs) {
+			height: 610px;
+		}
+	}
+}
+
+
+.page, .archive, .single {
+
+	.entry-title {
+		// text-align: right;
+		// border-bottom: 2px solid rgba(255,255,255, 0.5);
+		// padding-right: 45px;
+		padding-bottom: 15px;
+		font-weight: 300;
+	}
+
+	.text_under_title {
+		color: white;
+		// padding-left: 45px;
+		
+		p {
+			&:last-child {
+				font-size: 16px;
+			}
+		}
+		
+		blockquote, p {
+			margin-bottom: 30px;
+			font-size: 22px;
+
+			@include media-breakpoint-down(xs) {
+				font-size: 18px;
+				max-width: 350px;
+			}
+		}
+		
+		blockquote {
+			p {
+				font-size: 22px !important;
+
+				@include media-breakpoint-down(xs) {
+					font-size: 18px !important;
+
+				}
+			}
+		}
+	}
+
+	.content-block, .archive-container {
+		margin-top: -170px;
+
+		@include media-breakpoint-down(xs) {
+			margin-top: 0;
+		}
+	}
+
+	.section-first-screen {
+		z-index: 0;
+	}
+	.content-area {
+		z-index: 1;
+	}
+
+	section.feedback {
+		padding-bottom: 375px;
+	}
+}
+
+.single {
+	.content-block {
+		margin-top: 0;
+	}
+}
+
+
+.page-template-template-page-contacts {
+	#map {
+		height: 610px;
+	}
+}
+
+.page-child  {
+	.content-block {
+		margin-top: 0;
+	}
+
+	.sidebar-col {
+		margin-top: -170px;
+	}
+}
+

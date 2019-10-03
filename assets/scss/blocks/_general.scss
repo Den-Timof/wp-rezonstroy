@@ -1,0 +1,276 @@
+@import '../../../dev/bower_components/reset-css/sass/_reset.scss';
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5;
+	// overflow-y: hidden;
+
+}
+
+.link {
+	color: rgba(255, 255, 255, .5);
+
+	&:hover {
+		color: rgba(255, 255, 255, 255);
+	}
+}
+.link-2 {
+	color: rgba(255, 255, 255, 1);
+	
+	&:hover, &:active, &:focus {
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+.td-none {
+	text-decoration: none;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+}
+
+body.post, body.page {
+	margin: 0;
+}
+
+.bg-image {
+	// filter: brightness(0.5);
+	margin: 0 auto;
+	display: block;
+}
+
+.bg-layout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.bg-image-2 {
+	display: block;
+	margin: 0 auto !important;
+}
+
+.title-padding {
+	margin-bottom: 50px;
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: 0;
+	}
+}
+
+.section-title {
+	font-weight: 300;
+	font-size: 30px;
+	color: rgba(9, 19, 6, 255);
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+	margin: 20px 0;
+
+	@include media-breakpoint-down(md) {
+		font-size: 23px;
+	}
+
+	&::after {
+		content: url('../../img/title-line-right.png');
+		left: 20px;
+		position: absolute;
+		left: 110%;
+	}
+	&::before {
+		position: absolute;
+		right: 110%;
+		content: url('../../img/title-line-left.png');
+	}
+}
+
+._text-white {
+	color: white;
+}
+
+
+.btn-general {
+	width: 328px;
+	height: 62px;
+	border: none;
+	cursor: pointer;
+	display: block;
+	color: white !important;
+	text-align: center;
+	padding: 19px 0;
+
+	text-transform: uppercase;
+	background-image: url('../../img/btn-bg.png');
+	background-color: rgba(0,0,0,0);
+
+	text-decoration: none;
+
+	@include media-break-down(xxs) {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	&:hover {
+		background-color: #00872e;
+	}
+	&:active {
+		background-color: #006a24;
+	}
+
+	&._green {
+		background-color: #00a337;
+
+		&:hover {
+			background-color: #00872e;
+		}
+		&:active {
+			background-color: #006a24;
+		}
+	}
+
+	&._small {
+		width: 230px;
+	}
+
+	&._extra-small {
+		width: auto;
+		width: 150px;
+		height: auto;
+		padding: 10px 0;
+	}
+	
+}
+
+.heightAuto{
+	height:auto !important;
+}
+
+a {
+	color: rgba(255,255,255, 0.5);
+	
+	&:hover {
+		color: rgba(255,255,255, 1);
+	}
+}
+
+.entry-title {
+	color: rgba(255,255,255, 1);
+	font-size: 35px;
+	// padding-left: 50px;
+
+	@include media-breakpoint-down(xs) {
+		font-size: 28px;
+	}
+}
+
+
+.twentytwenty-container {
+	// width: 720px;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 400px !important;
+
+	@include media-break-up(xxl) {
+		height: 650px !important;
+	}
+	@include media-breakpoint-down(lg) {
+		height: 300px !important;
+		
+		@include media-breakpoint-down(md) {
+			height: 350px !important;
+
+			@include media-breakpoint-down(sm) {
+				height: 275px !important;
+
+				@include media-breakpoint-down(xs) {
+					height: 160px !important;
+				}
+			}
+		}
+	}
+
+	// .twentytwenty-before, .twentytwenty-after {
+	// 	width: auto;
+	// 	margin: 0 auto;
+	// 	display: block;
+	// 	left: 0;
+	// 	right: 0;
+	// }
+}
+
+.mx-auto {
+	margin: 0 auto !important;
+}
+
+
+.jcImgScroll li.slide.select .twentytwenty-container {
+	position: relative;
+
+	&::after, &::before {
+		width: 80px;
+		height: 40px;
+		position: absolute;
+		top: 0;
+		background-color: rgba(0,0,0,0.5);
+		z-index: 999;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		border: 2px solid #5db19b;
+		border-top: none;
+		font-size: 11px;
+
+		@include media-breakpoint-down(xs) {
+			width: 40px;
+			height: 20px;
+
+			font-size: 9px;
+		}
+	}
+
+	&::before {
+		content: 'ДО';
+		left: 0;
+		border-left: none;
+	}
+	&::after {
+		content: 'ПОСЛЕ';
+		right: 0;
+		border-right: none;
+	}
+}
+
+.twentytwenty-wrapper {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+
+.container {
+	@include media-break-up(xxl) {
+		max-width: 1300px;
+	}
+}
+
+
+.pagination-row {
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+}
+
+
+.position-static {
+	position: static !important;
+}
+.position-relative {
+	position: relative !important;
+}

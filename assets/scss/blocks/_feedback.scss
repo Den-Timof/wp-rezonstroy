@@ -1,0 +1,152 @@
+section.feedback {
+	padding-bottom: 340px;
+	padding-top: 15px;
+	position: relative;
+
+	@include media-breakpoint-down(xs) {
+		height: 600px;
+	}
+
+	&._display_1 {
+		background-repeat: no-repeat;
+		background-position: 45% -30%;
+		
+		@include media-breakpoint-down(lg) {
+			background-position: 40% -30%;
+
+			@include media-breakpoint-down(md) {
+				background-position: center center;
+
+				@include media-breakpoint-down(sm) {
+					background-position: 79% 100%;
+					background-size: 900px;
+				}
+				// @include media-breakpoint-down(xs) {
+				// 	@include media-break-down(xxs) {
+				// 	}
+				// }
+			}
+		}
+
+		.feedback-title {
+			text-transform: uppercase;
+
+			@include media-breakpoint-down(xs) {
+				font-size: 25px;
+			}
+		}
+
+		.feedback-button {
+			@include media-breakpoint-down(xs) {
+				
+				@include media-break-down(xxs) {
+					width: 100%;
+
+				}
+			}
+		}
+
+		.feedback-description {
+			@include media-breakpoint-down(xs) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+
+	.feedback-title {
+		font-size: 32px;
+		max-width: 400px;
+		color: rgba(9, 19, 6, 255);
+		margin-bottom: 20px;
+	}
+
+	.feedback-description {
+		margin-bottom: 80px;
+		max-width: 360px;
+		color: rgba(9, 19, 6, 255);
+	}
+
+	.feedback-image-bg {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.feedback-line-container {
+		position: absolute;
+
+		img {
+			position: relative;
+			top: -40px;
+			display: block;
+		}
+	}
+
+	&._display_2 {
+		padding-bottom: 0;
+		height: 610px;
+
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		.bg-image {
+			filter: brightness(0.5);
+			display: block;
+		}
+		.feedback-title {
+			color: white;
+			max-width: 935px;
+			text-align: center;
+			margin: 0 auto;
+
+			font-size: 28px;
+			margin-bottom: 20px;
+			
+			@include media-break-up(xxl) {
+				margin-bottom: 53px;
+				font-size: 32px;
+			}
+
+			@include media-breakpoint-down(lg) {
+				font-size: 25px;
+				margin-bottom: 30px;
+			}
+			@include media-breakpoint-down(md) {
+				max-width: 730px;
+			}
+
+		}
+		.feedback-container {
+			position: absolute;
+			margin: 0 auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			vertical-align: middle;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.feedback-button {
+			margin: 0 auto;
+		}
+		.feedback-description {
+			text-align: center;
+			color: white;
+			margin-left: auto;
+			margin-right: auto;
+
+			margin-bottom: 40px;
+
+			@include media-break-up(xxl) {
+				margin-bottom: 80px;
+			}
+
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+}

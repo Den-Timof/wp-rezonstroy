@@ -1,0 +1,36 @@
+.page-template-template-page-services {
+
+	article.post {
+		display: grid;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	
+		& > a {
+			display: grid;
+		}
+
+		&:hover {
+			.service-excerpt {
+				height: 200px;
+				transition: height .5s linear;
+			}
+		}
+		
+	}
+	
+	.size-thumbnail, .default-featured-img {
+		width: 100%;
+	}
+	
+	.service-excerpt {
+		
+		height: 0;
+		transition: height .5s linear;
+
+		min-height: 0 !important;
+		overflow: hidden;
+
+		font-size: 12px;
+	}
+
+}

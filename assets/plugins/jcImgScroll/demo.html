@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery jcImgScroll Plugin Demo</title>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="css/public.css" rel="stylesheet" type="text/css" media="all" />
+<style>
+/* jQuery jcImgScroll css */
+
+
+
+
+.jcImgScroll {
+  position: relative;
+  height: 342px;
+}
+
+.jcImgScroll li { border: 1px solid #ccc; }
+
+.jcImgScroll li a {
+  background: #fff;
+  display: block;
+  height: 340px;
+}
+
+.jcImgScroll li.loading a { background: #fff url(img/loading.gif) no-repeat center center; }
+
+.jcImgScroll li img,
+.jcImgScroll li,
+.jcImgScroll em,
+.jcImgScroll dl { display: none; }
+
+.jcImgScroll em.sPrev { background: url(img/arrow-left.png) no-repeat right center; }
+
+.jcImgScroll em.sNext { background: url(img/arrow-right.png) no-repeat left center; }
+
+.jcImgScroll dl dd {
+  background: url(img/NumBtn.png) no-repeat 0 bottom;
+  text-indent: -9em;
+}
+
+.jcImgScroll dl dd:hover,
+.jcImgScroll dl dd.curr { background-position: 0 0; }
+
+body,
+ul,
+ol,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dt,
+dd,
+form {
+  padding: 0;
+  margin: 0;
+}
+
+img { border: none; }
+
+li { list-style: none; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #666666;
+}
+
+a:hover { text-decoration: none }
+
+img { border: 0 }
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+label {
+  color: #6CBD45;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  margin: 0;
+}
+
+.h3 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#show { background: url(images/photo.jpg) }
+
+#meun {
+  color: #fff;
+  padding-left: 10px;
+}
+
+#meun img { float: left; }
+
+#submeun {
+  margin-left: 70px;
+  float: left;
+}
+
+#submeun span {
+  text-align: center;
+  margin-right: 10px;
+  float: left;
+  display: inline;
+}
+
+#submeun span a {
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: block;
+}
+
+#submeun span.cur {
+  text-align: center;
+  background: #82ce18;
+  margin-right: 10px;
+  float: left;
+  display: inline;
+}
+
+#top {
+  background-color: #000;
+  margin: 0em 0 10px 0em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E5E5E5;
+  height: 50px;
+  line-height: 50px;
+}
+
+label.subtitle {
+  font-size: 13px;
+  float: right;
+  color: #6CBD45;
+  margin: 0 10px;
+  text-align: right;
+}
+
+h1.title {
+  height: 50px;
+  font-size: 12px;
+  background: url(logo.png) no-repeat;
+}
+
+h1.title a:link,
+h1.title a:visited,
+h1.title a:hover {
+  color: #000;
+  text-decoration: none;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/jQuery-jcImgScroll.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/slider/3D-Image-Carousel-Rotator-Plugin-For-jQuery-jcImgScroll.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="demoTitle">jQuery jcImgScroll Plugin Demo</div>
+<script language="javascript" type="text/javascript">
+    $(function(){
+        $("#demo").jcImgScroll({
+            speed:400, 
+            width : 618, 
+            height:342, 
+            setZoom:.5,
+            loadClass:"loading", 
+            position:"center",
+            setTitle : { border : 0, height : 35, bgColor:"#6ba600", color:"#fff", padding:20, opacity:.8 }, 
+            arrow : {  
+                width:110,
+                height:342,
+                x:220,
+                y:0
+            },
+            count : 5,
+            offsetX : 140,
+            NumBtn : true,
+            title:true 
+        });
+    });
+</script>
+<div id="demo" class="jcImgScroll">
+  <ul>
+    <li><a href="#" path="http://lorempixel.com/1200/800/sports/" title="Image Caption"></a></li>
+    <li><a href="#" path="http://lorempixel.com/1200/800/abstract/" title="Image Caption"></a></li>
+    <li><a href="#" path="http://lorempixel.com/1200/800/animals/" title="Image Caption"></a></li>
+    <li><a href="#" path="http://lorempixel.com/1200/800/business/" title="Image Caption"></a></li>
+    <li><a href="#" path="http://lorempixel.com/1200/800/fashion/" title="Image Caption"></a></li>
+    <li><a href="#" path="http://lorempixel.com/1200/800/food/" title="Image Caption"></a></li>
+    <li><a href="#" path="http://lorempixel.com/1200/800/nightlife/" title="Image Caption"></a></li>
+    <li><a href="#" path="http://lorempixel.com/1200/800/technics/" title="Image Caption"></a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

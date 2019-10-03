@@ -1,0 +1,133 @@
+.modal {
+	@include media-breakpoint-down(xs) {
+		padding-right: 0 !important;
+	}
+
+	.modal-dialog {
+		position: relative;
+		top: 10%;
+
+		@media (min-width: 1200px) and (max-width: 1599.98px) and (max-height: 700px) {
+			top: 0;
+		}
+
+		.modal-content {
+			border-radius: 0;
+			padding-top: 60px;
+			padding-bottom: 60px;
+
+			.modal-header {
+				border: none;
+				position: relative;
+
+				&::before {
+					content: '';
+					width: 150px;
+					height: 2px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					background-color: #ffcc99;
+				}
+			}
+
+			.modal-title {
+				font-size: 30px;
+			}
+
+			.close {
+				padding: 0;
+				background: none;
+				border: none;
+				font-size: 30px;
+				opacity: .5;
+				line-height: 1;
+				cursor: pointer;
+
+				position: relative;
+				top: 10px;
+				right: 30px;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			.modal-header {
+				padding-left: 60px;
+				padding-right: 60px;
+
+				@include media-breakpoint-down(xs) {
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+			}
+			.modal-body {
+				padding-left: 60px;
+				padding-right: 60px;
+				padding-top: 40px;
+
+				@include media-breakpoint-down(xs) {
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+			}
+
+			.modal-footer {
+				margin-left: 0;
+				padding-left: 60px;
+				padding-right: 60px;
+				padding-top: 0;
+
+				display: flex;
+				flex-direction: column;
+				border: none;
+
+				@include media-breakpoint-down(xs) {
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+
+				label, a {
+					color: rgba(9, 19, 6, .5);
+				}
+				
+				a {
+					&:hover {
+						color: rgba(9, 19, 6, 1);
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.wpcf7 {
+	.wpcf7-form-control {
+		border-radius: 0;
+		padding: 10px 20px;
+		// margin-bottom: 20px;
+		margin-top: 20px;
+		width: 100%;
+	}
+
+	.wpcf7-list-item {
+		margin-left: 0;
+	}
+
+	.wpcf7-acceptance {
+		padding: 0;
+
+		input[type=checkbox] {
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	.wpcf7-submit {
+		width: 100%;
+		margin-top: 0;
+	}
+
+}

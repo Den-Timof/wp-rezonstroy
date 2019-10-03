@@ -1,0 +1,25 @@
+    $s-arrow-down: 73px 0px -73px 0px 30px 49px 103px 76px 'sprite.png';
+    $s-arrow-green-right: 33px 41px -33px -41px 24px 16px 103px 76px 'sprite.png';
+    $s-arrow-white-right: 0px 60px 0px -60px 24px 16px 103px 76px 'sprite.png';
+    $s-arrow: 73px 50px -73px -50px 11px 6px 103px 76px 'sprite.png';
+    $s-slider-arrow: 0px 0px 0px 0px 32px 59px 103px 76px 'sprite.png';
+    $s-zoom: 33px 0px -33px 0px 39px 40px 103px 76px 'sprite.png';
+
+@mixin spriteWidth($sprite) {
+  width: nth($sprite,5);
+}
+@mixin spriteHeight($sprite) {
+  height: nth($sprite,6);
+}
+@mixin spritePosition($sprite) {
+  background-position: nth($sprite,3) nth($sprite,4);
+}
+@mixin spriteImage($sprite) {
+  background-image: url( unquote('../../img/sprite/' + nth($sprite,9)));
+}
+@mixin sprite($sprite) {
+  @include spriteImage($sprite);
+  @include spritePosition($sprite);
+  @include spriteWidth($sprite);
+  @include spriteHeight($sprite);
+}
